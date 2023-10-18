@@ -4,11 +4,12 @@ buildscript {
     ext.kotlin_version = '1.4.0'
     repositories {
         google()
-        maven { url "https://jitpack.io" }
-        jcenter()
+        // maven { url "https://jitpack.io" }
+        maven { url 'https://mvnrepository.com/artifact/com.github.gundy/semver4j' }
+        mavenCentral()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:4.2.0'
+        classpath 'com.android.tools.build:gradle:4.2.2'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         classpath "io.gitlab.arturbosch.detekt:detekt-gradle-plugin:1.15.0"
     }
@@ -19,8 +20,9 @@ allprojects {
 
     repositories {
         google()
-        maven { url "https://jitpack.io" }
-        jcenter()
+        maven { url 'https://mvnrepository.com/artifact/com.github.gundy/semver4j'}
+        maven { url 'https://jitpack.io' }
+        mavenCentral()
     }
 
     detekt {
